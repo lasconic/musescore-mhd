@@ -40,19 +40,19 @@
 					<h2>MuseScore</h2>
 					<h3>Hack sheet music!</h3>
 					<p>
-						<small>Thomas Bonte / <a href="http://twitter.com/thomasbonte">@thomasbonte</a></small>
+						<small>Nicolas Froment / <a href="http://twitter.com/lasconic">@lasconic</a></small>
 					</p>
 				</section>
 
 				<section>
 					<h2>MuseScore</h2>
 					<p>
-						MuseScore is free and open source notation software 
+						MuseScore is free and open source notation software
 					</p>
 				</section>
 
 				<section>
-					<img src="musescore_img/software.png">
+					<img src="musescore_img/software.jpg">
 				</section>
 
 				<section>
@@ -63,13 +63,21 @@
 						<li class="fragment">Interact with the score in real time via <b>OSC</b></li>
 						<li class="fragment">Tweak the audio output with <b>Soundfonts</b></li>
 						<li class="fragment">Route <b>MIDI out</b> via Jack</li>
-					</ul>					
+					</ul>
+				</section>
+
+				<section>
+					<h2>MuseScore.com</h2>
+					<img src="musescore_img/website.png">
 				</section>
 
 				<section>
 					<h2>MuseScore.com</h2>
 					<p>
-						A large repository of user generated scores available in several formats through a REST API.
+						Large repository of user generated scores
+					</p>
+					<p>
+						Several formats through a REST API
 					</p>
 					<ul>
 						<li class="fragment">MuseScore format</li>
@@ -80,7 +88,7 @@
 						<li class="fragment">Synchronisation data: timestamp ↔ measure</li>
 					</ul>
 				</section>
-			
+
 				<section>
 					<h2>Search scores</h2>
 					<p>
@@ -88,8 +96,8 @@
 						<pre><code>
 import requests
 
-url = "http://api.musescore.com/services/rest/score.json"
-url += "&oauth_consumer_key=musichackday"
+url = "https://api.musescore.com/services/rest/score.json"
+url += "&oauth_consumer_key=musichackday2016"
 
 score = requests.get(endpoint + "&text=Bach").json()
 
@@ -110,7 +118,7 @@ for score in scores:
 					<pre><code>
 import requests
 
-url = "http://api.musescore.com/services/rest/score/29517.json"
+url = "https://api.musescore.com/services/rest/score/29517.json"
 url += "&oauth_consumer_key=musichackday"
 
 score = requests.get(url).json()
@@ -125,38 +133,11 @@ print midiUrl
 				</section>
 
 				<section>
-					<h2>MIDI hack with a Steinway piano</h2>
-					<iframe width="640" height="360" src="//www.youtube.com/embed/Q5nJHc0Ha04" frameborder="0" allowfullscreen></iframe>
-				</section>				
-
-				<section>
-					<h2>Get embed code</h2>
-					<p>
-						Using jQuery OEmbed, it's a one liner!
-						<pre><code>
-$(document).ready(function() {
-    $("#container").oembed("http://mus.cr/19kzisE");
-});
-						</pre></code>
-					</p>
-				</section>
-				
-				<section>
-					<h2>New for Barcelona</h2>
-					<ul>
-						<li>MuseScore.com API extended</li>
-						<li>Get favorited scores</li>
-						<li>Get Sets</li>
-						<li>Get Groups</li>
-					</ul>
-				</section>
-
-				<section>
 					<h2>MuseScore.com API</h2>
 					<p><a href="http://developers.musescore.com">http://developers.musescore.com</a></p>
 					<ul>
 						<li>Consumer key: <i>musichackday</i></li>
-						<li>Consumer secret: <i>musichackday2014</i></li>
+						<li>Consumer secret: <i>musichackday2016</i></li>
 					</ul>
 					<br><br>
 					<h2>Contact</h2>
@@ -165,20 +146,16 @@ $(document).ready(function() {
 				</section>
 
 				<section>
-					<h2>Past hacks</h2>
-				
+					<h2>Interesting scores</h2>
 					<ul>
-						<li>Multi videoscores</li>
-						<li>Score followers</li>
-						<li>Collaborative annotation on google hangout</li>
-						<li><a href="http://tinyurl.com/musescore-hack-days">A lot more</a></li>
+						<li><a href="https://musescore.com/user/40805/scores/65113">Beethoven Symphony No. 5 (1st movement)</a></li>
+						<li><a href="https://musescore.com/openscore-/tchaikovsky---symphony-no-6/s/048b6d">Tchaikovsky Symphony No. 6 (4th movement)</a></li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Idea for 3D hackers</h2>
+					<h2>3D hands on a keyboard</h2>
 					<ul>
-						<li>3D animated hands on a keyboard</li>
 						<li>Algorithm to find fingerings automatically</li>
 						<li>Hands model animated in three.js</li>
 						<li>MIDI or MusicXML file with fingerings</li>
@@ -187,23 +164,18 @@ $(document).ready(function() {
 				</section>
 
 				<section>
-					<h2>Idea for data hackers</h2>
+					<h2>Data</h2>
 					<ul>
 						<li>Large dataset of MusicXML and MIDI files</li>
+						<li>Magenta</li>
 						<li>Features extraction</li>
-						<li>CLassification, recommandation...</li>
-						<li>Query by humming, by melody</li>
+						<li>Classification, recommandation, visualisation</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Idea for HW hackers</h2>
-					<ul>
-						<li>MIDI files can be parsed and read by Arduino</li>
-						<li>MuseScore can run on Raspberry pi</li>
-						<li>Live MIDI, see the piano hack</li>
-						<li>Large score display anyone?</li>
-					</ul>
+					<h3>Visualization example: Beethoven 5th</h3>
+					<img width="50%" src="musescore_img/visualisation.png">
 				</section>
 
 				<section>
